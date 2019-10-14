@@ -1,0 +1,25 @@
+<h1>Welcome to Fire Rasp Home</h1>
+<h2>Please Login to continue</h2>
+<form class="full-width" [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+
+
+  <mat-form-field class="full-width">
+    <input matInput type="email" placeholder="Email" formControlName="username">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="full-width" >
+    <input matInput type="password" placeholder="Password" formControlName="password">
+    </mat-form-field>
+
+  <br>
+
+  <div style="text-align: center;"><button mat-flat-button type="submit" [disabled]="!loginForm.valid">Submit</button></div>
+
+  <br>
+
+  <span>{{error.success}}</span>
+
+</form>
+
